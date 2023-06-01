@@ -25,6 +25,8 @@ class BlogController extends Controller
 
         $posts = $posts->paginate(7);
 
+        $posts->appends($request->toArray());
+
         return Inertia::render('Home', [
             "posts" => $posts
         ]);

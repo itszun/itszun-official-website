@@ -20,7 +20,11 @@ export default function Posts({ posts }) {
 
     return (
         <section className="w-full md:w-2/3 flex flex-col items-center px-3">
-            {data && data.map((v, k) => <PostCard key={k} data={v} />)}
+            {total ? data.map((v, k) => <PostCard key={k} data={v} />) : (
+                <div className="h-96 flex items-center">
+                    No published post
+                </div>
+            )}
             {links && (
                 <div className="flex items-center py-8">
                     {links.map((v, k) => (
