@@ -1,0 +1,83 @@
+{
+    "main": [
+        {
+            "name": "Home",
+            "url": "/"
+        },
+        {
+            "name": "About",
+            "url": "/about"
+        },
+        {
+            "name": "Contact",
+            "url": "/contact"
+        },
+        {
+            "name": "Pages",
+            "url": "",
+            "hasChildren": true,
+            "children": [
+                {
+                    "name": "Authors",
+                    "url": "/authors"
+                },
+                {
+                    "name": "Categories",
+                    "url": "/categories"
+                },
+                {
+                    "name": "Tags",
+                    "url": "/tags"
+                },
+                {
+                    "name": "Elements",
+                    "url": "/elements"
+                },
+                {
+                    "name": "Privacy Policy",
+                    "url": "/privacy-policy"
+                }
+            ]
+        }
+    ],
+    "header": [
+        {
+            "name": "Technology",
+            "url": "/?category=technology"
+        },
+        {
+            "name": "Portfolio",
+            "url": "/?category=portfolio"
+        },
+        {
+            "name": "Philosophy",
+            "url": "/?category=philosophy"
+        },
+        {
+            "name": "Professional",
+            "url": "/?category=professional"
+        },
+        {
+            "name": "Personal",
+            "url": "/?category=personal"
+        }
+    ],
+    "footer": [
+        {
+            "name": "About",
+            "url": "/about"
+        },
+        {
+            "name": "Contact",
+            "url": "/contact"
+        },
+        {
+            "name": "Terms & Conditions",
+            "url": "/terms-condition"
+        },
+        {
+            "name": "Privacy Policy",
+            "url": "/privacy-policy"
+        }
+    ]
+}
