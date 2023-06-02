@@ -7,7 +7,7 @@ import Header from "./Components/Header";
 export default function BlogLayout({ children }) {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <Header />
 
             <div className="min-h-screen flex flex-col pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">

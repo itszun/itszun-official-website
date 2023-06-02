@@ -3,7 +3,7 @@ import InstagramFeeds from "./InstagramFeeds";
 export default function Sidebar() {
     return (
         <aside className="w-full md:w-1/3 flex flex-col items-center px-3">
-            <div className="w-full bg-white shadow flex flex-col my-4 p-6">
+            <div className="w-full bg-white dark:bg-gray-800 dark:text-white shadow flex flex-col my-4 p-6">
                 <p className="text-xl font-semibold pb-5">About Me</p>
                 <p className="pb-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

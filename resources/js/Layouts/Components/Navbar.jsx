@@ -4,7 +4,7 @@ export default function Navbar() {
     const { main } = menu;
 
     return (
-        <nav className="w-full py-4 bg-blue-800 shadow">
+        <nav className="w-full py-4 bg-blue-800 dark:bg- shadow">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between">
                 <nav>
                     <ul className="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">

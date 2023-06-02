@@ -9,21 +9,21 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <>
+        <div className="dark:bg-gray-900 ">
             <header className="w-full container mx-auto">
                 <div className="flex flex-col items-center py-12">
                     <a
-                        className="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl"
+                        className="font-bold uppercase text-gray-800 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-300 text-5xl"
                         href="/"
                     >
                         Itszun
                     </a>
-                    <p className="text-lg text-gray-600">Welcome to My Blog</p>
+                    <p className="text-lg text-gray-500">Welcome to My Blog</p>
                 </div>
             </header>
 
             <nav
-                className="w-full py-4 border-t border-b bg-gray-100"
+                className="w-full py-4 border-t border-b dark:border-blue-900 bg-gray-100 dark:bg-blue-950 dark:text-white"
                 x-data="{ open: false }"
             >
                 <div className="block sm:hidden">
@@ -53,6 +53,6 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
-        </>
+        </div>
     );
 }

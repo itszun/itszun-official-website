@@ -8,7 +8,7 @@ export default function Post({ auth, post }) {
         <BlogLayout>
             <div className="container mx-auto flex flex-wrap py-6">
                 <PostDetail post={post} />
-                <Sidebar />
+                {/* <Sidebar /> */}
             </div>
         </BlogLayout>
     );

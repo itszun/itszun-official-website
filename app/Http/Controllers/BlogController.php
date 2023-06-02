@@ -15,7 +15,9 @@ class BlogController extends Controller
             ->with('category')
             ->published()->select([
                 'id', 'published_at', 'title', 'slug', 'excerpt', 'banner', 'blog_author_id', 'blog_category_id'
-            ])->orderBy('published_at', 'desc');
+            ])
+            ->orderBy('published_at', 'desc')
+            ->orderBy('created_at', 'desc');
 
         if ($request->category) {
             $posts->whereHas('category', function($q) use ($request) {

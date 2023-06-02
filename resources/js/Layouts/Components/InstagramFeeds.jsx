@@ -1,7 +1,7 @@
 export default function InstagramFeeds() {
     return (
-        <div className="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p className="text-xl font-semibold pb-5">Instagram</p>
+        <div className="w-full bg-white dark:bg-gray-800 shadow flex flex-col my-4 p-6">
+            <p className="text-xl dark:text-white font-semibold pb-5">Instagram</p>
             <div className="grid grid-cols-3 gap-3">
                 <img
                     className="hover:opacity-75"

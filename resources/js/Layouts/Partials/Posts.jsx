@@ -34,7 +34,7 @@ export default function Posts({ posts }) {
                             className={
                                 v.active
                                     ? "h-10 w-10 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center bg-blue-800"
-                                    : "h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center"
+                                    : "h-10 w-10 font-semibold text-gray-800 dark:text-white hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center"
                             }
                         >
                             {Parser().parse(v.label)}

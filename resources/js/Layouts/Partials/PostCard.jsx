@@ -20,19 +20,19 @@ export default function PostCard({ data }) {
     } = data;
 
     return (
-        <article className="flex flex-col shadow my-4 w-full">
+        <article className="flex flex-col shadow my-4 w-full dark:text-white">
             {banner && (
                 <Link href={detail_page_url} className="hover:opacity-75">
                     <img src={banner_url} />
                     {/* <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1" /> */}
                 </Link>
             )}
-            <div className="bg-white flex flex-col justify-start p-6">
+            <div className="bg-white dark:bg-gray-800 flex flex-col justify-start p-6">
                 <PostCategory category={category}/>
 
                 <Link
                     href={detail_page_url}
-                    className="text-3xl font-bold hover:text-gray-700 pb-4"
+                    className="text-3xl font-bold hover:text-gray-700 dark:hover:text-blue-500 pb-4"
                 >
                     {title}
                 </Link>
@@ -48,7 +48,7 @@ export default function PostCard({ data }) {
                 </Link>
                 <Link
                     href={detail_page_url}
-                    className="uppercase text-gray-800 hover:text-black"
+                    className="uppercase text-gray-800 dark:text-white light:hover:text-black dark:hover:text-gray-400"
                 >
                     Continue Reading <i className="fas fa-arrow-right"></i>
                 </Link>
