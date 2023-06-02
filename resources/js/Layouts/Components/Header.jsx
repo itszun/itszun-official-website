@@ -1,12 +1,15 @@
 import menu from "@/Config/menu.json";
-import { Link } from "@inertiajs/react";
+import { Link, usePage } from "@inertiajs/react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
     const { header } = menu;
+    const topics = usePage().props.topics;
     const [isOpen, setIsOpen] = useState(false);
+
+    console.log("topics ",topics);
 
     return (
         <div className="dark:bg-gray-900 ">
@@ -41,10 +44,10 @@ export default function Header() {
                 </div>
                 <div className={"w-full flex-grow sm:flex sm:items-center sm:w-auto transition-all " + (isOpen ? "block" : "hidden")}>
                     <div className="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-                        {header &&
-                            header.map((v, k) => (
+                        {topics &&
+                            topics.map((v, k) => (
                                 <Link key={k}
-                                    href={v.url}
+                                    href={"/?category=" + v.slug}
                                     className="hover:bg-gray-400 rounded py-2 px-4 mx-2"
                                 >
                                     {v.name}

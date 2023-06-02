@@ -19,7 +19,7 @@ export default function Posts({ posts }) {
     console.log(posts);
 
     return (
-        <section className="w-full md:w-2/3 flex flex-col items-center px-3">
+        <section className="w-full md:w-2/3 flex flex-col items-center px-3 dark:text-white">
             {total ? data.map((v, k) => <PostCard key={k} data={v} />) : (
                 <div className="h-96 flex items-center">
                     No published post
