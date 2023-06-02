@@ -35,11 +35,11 @@ export default function PostDetail({ post }) {
                         <img src={banner_url} />
                     </a>
                 )}
-                <div className="bg-white  dark:bg-gray-800 dark: text-white flex flex-col justify-start p-6">
+                <div className="bg-white dark:bg-gray-800 dark:text-white flex flex-col justify-start p-6">
                     <PostCategory category={post.category}/>
                     <a
                         href="#"
-                        className="text-3xl font-bold hover:text-gray-700 pb-4"
+                        className="text-3xl font-bold dark:hover:text-blue-500 hover:text-gray-700 pb-4"
                     >
                         {title}
                     </a>
@@ -66,7 +66,7 @@ export default function PostDetail({ post }) {
                         href={prevPost.detail_page_url}
                         className="w-1/2 bg-white dark:bg-gray-800 dark:text-white shadow hover:shadow-md text-left p-6"
                     >
-                        <p className="text-lg text-blue-800 font-bold flex items-center">
+                        <p className="text-lg text-blue-800 dark:text-sky-200 font-bold flex items-center">
                             <i className="fas fa-arrow-left pr-1"></i> Previous
                         </p>
                         <p className="pt-2">{prevPost.title}</p>
@@ -77,7 +77,7 @@ export default function PostDetail({ post }) {
                         href={nextPost.detail_page_url}
                         className="w-1/2 bg-white dark:bg-gray-800 dark:text-white shadow hover:shadow-md text-right p-6"
                     >
-                        <p className="text-lg text-blue-800 font-bold flex items-center justify-end">
+                        <p className="text-lg text-blue-800 dark:text-sky-200 font-bold flex items-center justify-end">
                             Next <i className="fas fa-arrow-right pl-1"></i>
                         </p>
                         <p className="pt-2">{nextPost.title}</p>
