@@ -39,7 +39,8 @@ class BlogController extends Controller
             ->with('category')
             ->whereYear('published_at', $year)
             ->whereMonth('published_at', $month)
-            ->whereSlug($slug)->firstOrFail();
+            ->whereSlug($slug)
+            ->published()->firstOrFail();
 
         $published_at = $post->getOriginal('published_at');
 
