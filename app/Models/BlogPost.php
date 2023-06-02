@@ -66,6 +66,6 @@ class BlogPost extends FilamentBlogPost
 
     public function scopePublished(Builder $query)
     {
-        return $query->whereNotNull('published_at')->where('published_at', '>', now()->format('Y-m-d'));
+        return $query->whereNotNull('published_at')->where('published_at', '<', now()->format('Y-m-d'));
     }
 }
