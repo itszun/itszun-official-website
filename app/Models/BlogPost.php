@@ -68,4 +68,8 @@ class BlogPost extends FilamentBlogPost
     {
         return $query->whereNotNull('published_at')->where('published_at', '<=', now()->format('Y-m-d'));
     }
+
+    public function visit() {
+        return visits($this);
+    }
 }
