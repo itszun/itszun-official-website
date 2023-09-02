@@ -17,29 +17,32 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [BlogController::class, 'home'])->name('home');
-Route::get('/article/{year}/{month}/{slug}', [BlogController::class, 'postDetail'])->name('post.detail');
-
-
-Route::get('/post', function () {
-    return Inertia::render('Post', [
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
-
-Route::get('/bookworm', function () {
-    return Inertia::render('Bookworm/Home');
-});
-
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::domain("itszun.com")->group(function() {
+    Route::get('/', [BlogController::class, 'home'])->name('home');
+    Route::get('/article/{year}/{month}/{slug}', [BlogController::class, 'postDetail'])->name('post.detail');
+    
+    
+    Route::get('/post', function () {
+        return Inertia::render('Post', [
+            'phpVersion' => PHP_VERSION,
+        ]);
+    });
+    
+    Route::get('/bookworm', function () {
+        return Inertia::render('Bookworm/Home');
+    });
+    
+    
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
+    
+    Route::middleware('auth')->group(function () {
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    });
+    
 });
 
 Route::domain('fuyuzora.itszun.com')->group(function() {
