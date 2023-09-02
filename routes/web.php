@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
 Route::domain('fuyuzora.itszun.com')->group(function() {
     Route::get('/', function() {
         return "Hello Fuyuzora";
-    });
+    })->name("fuyuzora");
 });
 
 require __DIR__.'/auth.php';
