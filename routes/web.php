@@ -17,7 +17,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::domain("itszun.com")->group(function() {
+// Route::domain("itszun.com")->group(function() {
     Route::get('/', [BlogController::class, 'home'])->name('home');
     Route::get('/article/{year}/{month}/{slug}', [BlogController::class, 'postDetail'])->name('post.detail');
     
@@ -43,7 +43,7 @@ Route::domain("itszun.com")->group(function() {
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
     
-});
+// });
 
 Route::domain('fuyuzora.itszun.com')->group(function() {
     Route::get('/', function() {
