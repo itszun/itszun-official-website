@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\EntryController;
+use App\Http\Controllers\API\SongController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('entry', [EntryController::class, "index"]);
+Route::resource('entry', EntryController::class);
+Route::resource('song', SongController::class);

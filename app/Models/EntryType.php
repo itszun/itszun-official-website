@@ -10,4 +10,8 @@ class EntryType extends Model
     use HasFactory;
 
     protected $guarded = ["id"];
+
+    public function scopeIdOfname($q, $name) {
+        $q->where('name', $name)->orWhere('slug', $name)->first();
+    }
 }

@@ -3,17 +3,19 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\Entry;
+use App\Models\EntryType;
+use App\Models\Song;
 use Illuminate\Http\Request;
 
-class EntryController extends Controller
+class SongController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Entry::all();
+        return Song::query()
+            ->paginate(10);
     }
 
     /**
@@ -21,10 +23,13 @@ class EntryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "title" => "",
-            ""
+        $validated = $request->validate(['title' => 'required']);
+        $song = Song::create([
+            'title' => $validated['title'],
+            'entry_type_id' => EntryType::idOfname('song'),
+            'votes' => 1
         ]);
+        return $song;
     }
 
     /**
