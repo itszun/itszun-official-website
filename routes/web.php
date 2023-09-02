@@ -47,5 +47,10 @@ Route::domain('fuyuzora.itszun.com')->group(function() {
         return "Hello Fuyuzora";
     })->name("fuyuzora");
 });
+Route::domain('w.itszun.com')->group(function() {
+    Route::get('/', function() {
+        return "Hello Fuyuzora";
+    })->name("fuyuzora_w");
+});
 
 require __DIR__.'/auth.php';
